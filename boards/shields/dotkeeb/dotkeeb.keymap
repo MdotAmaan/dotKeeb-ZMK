@@ -10,7 +10,8 @@
 #define GAME 1
 #define L1 2
 #define L2 3
-#define SYS 4
+#define L3 4
+#define SYS 5
 
 / {  
     combos {
@@ -18,7 +19,7 @@
         combo_sys {
             timeout-ms = <50>;
             key-positions = <38 39 40>;
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
         };
         combo_out_tog {
             timeout-ms = <25>;
@@ -32,21 +33,11 @@
         };
     };
     behaviors {
-        td0: tap_dance_l1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_L1";
-            #binding-cells = <0>;
-            tapping-term-ms = <350>;
-            bindings = <&mo 2>, <&tog 2>;
-        };
-        td1: tap_dance_l2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_L2";
-            #binding-cells = <0>;
-            tapping-term-ms = <125>;
-            bindings = <&mo 3>, <&tog 3>;
-        };            timeout-ms = <25>;
-
+      hid_trackball_interface {
+          automouse-layer = <4>;
+          automouse-layer-timeout-ms = <600>;
+          scroll-layers = <2>;
+      };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -87,12 +78,22 @@
             >;
         };
 
-        l2_layer {
+        nav_layer {
             bindings = <
      &trans     &trans    &trans    &trans   &trans   &trans                                             &none       &mkp LCLK &mkp MCLK &mkp RCLK &none     &none
      &trans     &trans    &trans    &trans   &trans   &trans                                             &none       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &none
      &trans     &trans    &trans    &trans   &trans   &trans                                             &none       &kp HOME  &kp PG_DN &kp PG_UP &kp END   &none
                 &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
+                                    &trans   &trans                                                                  &trans    &trans
+            >;
+        };
+
+        mouse_layer {
+            bindings = <
+     &trans     &trans    &trans    &trans   &trans   &trans                                             &mkp LCLK   &mkp MCLK &trans    &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &mkp RCLK &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &trans    &trans  &trans   &trans
+                &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &trans    &trans  &trans
                                     &trans   &trans                                                                  &trans    &trans
             >;
         };
