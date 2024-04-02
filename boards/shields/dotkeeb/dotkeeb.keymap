@@ -32,13 +32,13 @@
             bindings = <&kp LGUI>;
         };
     };
-    behaviors {
+    //behaviors {
       hid_trackball_interface {
           automouse-layer = <4>;
           automouse-layer-timeout-ms = <600>;
           scroll-layers = <2>;
       };
-    };
+    //};
     keymap {
         compatible = "zmk,keymap";
 
