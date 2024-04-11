@@ -16,7 +16,6 @@
 &hid_trackball_interface {
     automouse-layer = <4>;
     automouse-layer-timeout-ms = <600>;
-    scroll-layers = <2>;
 };
 / {  
     combos {
@@ -90,11 +89,11 @@
 
         mouse_layer {
             bindings = <
-     &trans     &trans    &trans    &trans   &trans   &trans                                             &mkp LCLK   &mkp MCLK &trans    &trans  &trans   &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &mkp RCLK &trans  &trans   &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &trans    &trans  &trans   &trans
-                &trans    &trans    &trans   &trans   &trans                                             &trans      &trans    &trans    &trans  &trans
-                                    &trans   &trans                                                                  &trans    &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                                             &mkp LCLK     &mkp RCLK &trans    &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                                             &tb_tg_scroll &mkp MCLK &mkp MCLK &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                                             &trans        &trans    &trans    &trans  &trans   &trans
+                &trans    &trans    &trans   &trans   &trans                                             &trans        &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
+                                    &trans   &trans                                                                    &trans    &trans
             >;
         };
 
