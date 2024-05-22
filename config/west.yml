@@ -14,5 +14,8 @@ manifest:
     - name: zmk-hid-trackball-interface
       remote: englmaxi
       revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: v2
   self:
     path: config
