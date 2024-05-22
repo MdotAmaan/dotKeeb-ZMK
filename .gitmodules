@@ -1,0 +1,6 @@
+[submodule "boards/shields/dotkeeb/zmk-helpers"]
+	path = boards/shields/dotkeeb/zmk-helpers
+	url = https://github.com/urob/zmk-helpers.git
+[submodule "zmk-helpers"]
+	path = zmk-helpers
+	url = https://github.com/urob/zmk-helpers.git
