@@ -47,7 +47,7 @@
         hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 46 47>;    // <---[[right-hand keys]]
         hold-trigger-on-release;
       };
-      hmr: left_positional_hold_tap {
+      hmr: right_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         flavor = "balanced";
