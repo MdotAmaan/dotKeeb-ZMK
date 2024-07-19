@@ -11,13 +11,10 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 
       import: app/west.yml
-    - name: zmk-hid-trackball-interface
-      remote: englmaxi
-      revision: main
-    - name: zmk-helpers
-      remote: urob
-      revision: v2
+    # - name: zmk-hid-trackball-interface
+    #   remote: englmaxi
+    #   revision: 
   self:
     path: config
