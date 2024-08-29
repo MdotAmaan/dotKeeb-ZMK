@@ -10,8 +10,10 @@
 #define INPUT_REL_Y 0x01                /**< Relative Y coordinate */
 #define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
 #define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
-#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */&default_transform { 
-#
+#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
+
+
+&default_transform { 
     col-offset = <6>;
 };
 
