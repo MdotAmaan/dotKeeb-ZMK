@@ -7,6 +7,7 @@ requires: [pro_micro]
 features:
   - keys
   - display
+  - pointer
 siblings:
   - dotkeeb_left
   - dotkeeb_right
