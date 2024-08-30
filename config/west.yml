@@ -16,7 +16,7 @@ manifest:
       revision: main 
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: mdotamaan
+      remote: badjeff
       revision: main
   self:
     path: config
