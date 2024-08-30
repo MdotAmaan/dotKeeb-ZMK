@@ -14,7 +14,7 @@ tb0_mmv_ibl {
                 compatible = "zmk,input-behavior-listener";
                 
                 /* the input point device alias */
-                device = <&pd0>;
+                device = <&trackball>;
 
                 /* only enable in default layer (DEF) & mouse key layer (MSK) */
                 layers = <DEF MSK>;
