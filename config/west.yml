@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/urob
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: mdotamaan
+      url-base: https://github.com/MdotAmaan
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -14,7 +16,7 @@ manifest:
       revision: main 
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: mdotamaan
       revision: main
   self:
     path: config
