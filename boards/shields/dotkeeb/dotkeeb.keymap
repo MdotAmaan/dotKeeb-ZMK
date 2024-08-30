@@ -107,8 +107,8 @@
 
         mouse_layer {
             bindings = <
-     &trans     &trans    &trans    &trans   &trans   &trans                      &mkp LCLK     &mkp RCLK &trans    &trans  &trans   &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                      &trans        &trans    &trans    &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                      &mkp RCLK     &trans    &trans    &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                      &mkp MCLK     &trans    &trans    &trans  &trans   &trans
      &trans     &trans    &trans    &trans   &trans   &trans                      &trans        &trans    &trans    &trans  &trans   &trans
                 &trans    &trans    &trans   &trans   &trans                      &trans        &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
                                     &trans   &trans                               &trans        &trans    &trans    &trans
@@ -128,8 +128,8 @@
         };
         scrl_layer {
             bindings = <
-     &trans     &trans    &trans    &trans   &trans   &trans                       &mkp LCLK     &mkp RCLK &trans    &trans    &trans    &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &trans    &trans    &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &mkp RCLK     &trans    &trans    &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &mkp MCLK     &trans    &trans    &trans  &trans   &trans
      &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
                                     &trans   &trans                                &trans        &trans    &trans    &trans
@@ -139,8 +139,8 @@
         };
         snipe_layer {
             bindings = <
-     &trans     &trans    &trans    &trans   &trans   &trans                       &mkp LCLK     &mkp RCLK &trans    &trans    &trans    &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &trans    &trans    &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &mkp RCLK     &trans    &trans    &trans  &trans   &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &mkp MCLK     &trans    &trans    &trans  &trans   &trans
      &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &trans    &trans    &trans
                 &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
                                     &trans   &trans                                &trans        &trans    &trans    &trans
