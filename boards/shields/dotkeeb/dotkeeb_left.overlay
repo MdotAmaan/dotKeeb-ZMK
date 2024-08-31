@@ -10,3 +10,7 @@
         , <&pro_micro 4 GPIO_ACTIVE_HIGH> // col6
         ;
 };
+
+&trackball {
+    status = "okay";
+};
