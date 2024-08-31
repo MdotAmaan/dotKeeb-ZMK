@@ -24,8 +24,8 @@ tb0_mmv_ibl {
                 evt-type = <INPUT_EV_REL>;
                 x-input-code = <INPUT_REL_X>;
                 y-input-code = <INPUT_REL_Y>;
-                scale-multiplier = <1>;
-                scale-divisor = <1>;
+                scale-multiplier = <3>;
+                scale-divisor = <4>;
 
                 /* bind a behavior to auto activate MSK layer for &mkp */
                 bindings = <&ib_tog_layer MSK>;
