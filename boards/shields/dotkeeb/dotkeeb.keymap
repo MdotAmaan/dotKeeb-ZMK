@@ -61,14 +61,14 @@ tb0_mmv_ibl {
                 /* NOTE: This behavior is different to scale-divisor. */
                 /*       The delta value is accumlated until result >= 1 after cast. */
                 /*       The scrolling is preented in hi-res and allow precise scrolling */
-                bindings = <&ib_wheel_scaler 1 1>;
+                bindings = <&ib_wheel_scaler 1 32>;
         };
 
         /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
         ib_tog_layer: ib_tog_layer {
                 compatible = "zmk,input-behavior-tog-layer";
                 #binding-cells = <1>;
-                time-to-live-ms = <3000>;
+                time-to-live-ms = <2000>;
         };
 
         /* define a resolution down scaler only for INPUT_REL_WHEEL */
