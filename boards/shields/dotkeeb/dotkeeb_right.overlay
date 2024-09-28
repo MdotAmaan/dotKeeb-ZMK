@@ -11,7 +11,9 @@
 #define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
 #define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
 #define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
-
+#define DEF 0 // default layer
+#define MSK 4 // mouse key layer
+#define MSC 6 // mouse scroll layer
 
 &default_transform { 
     col-offset = <6>;
