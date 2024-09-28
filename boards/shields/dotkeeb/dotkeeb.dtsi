@@ -39,3 +39,6 @@
 
         };
 };
+&trackball {
+    status = "okay";
+};
