@@ -47,10 +47,11 @@ Quantities listed are for building 2 halves.
 | Quantity | Part | Notes |
 | -------- | ---- | -------------------------------------------------------------------------------- |
 | 1 | **dotKeeb_left.stl** |  |
-| 52 | **dotKeeb_right.stl** |  |
-| 52 | **Charybdis top trackball adapter** | Both closed and open variants work |
-| 52 | **Charybdis bottom trackball adapter** | |
-| 52 | **Trackball bearing inserts** | Make sure you choose the right one  |
+| 1 | **dotKeeb_right.stl** |  |
+| 1 | **Charybdis top trackabll adapter** | Both closed and open variants work |
+| 1 | **Charybdis bottom trackball adapter** | |
+| 1 | **PMW3610 Adapter** | TODO: modify the bottom adapter so this isn't necessary |
+| 3 | **Trackball bearing inserts** | Make sure you choose the right one  |
 
 
 
