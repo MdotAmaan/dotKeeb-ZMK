@@ -49,7 +49,7 @@ Quantities listed are for building 2 halves.
 | 1 | **Charybdis top trackabll adapter** | Both closed and open variants work |
 | 1 | **Charybdis bottom trackball adapter** | |
 | 1 | **PMW3610 Adapter** | TODO: modify the bottom adapter so this isn't necessary |
-| 3 | **Trackball bearing inserts** | Make sure you choose the right one  |
+| 3 | **Trackball bearing inserts** | Make sure you choose the right one for your bearing type |
 
 
 
