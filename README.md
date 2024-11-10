@@ -1,7 +1,5 @@
 # dotKeeb
 
-A wireless ergonomic keyboard inspired by the dactyl.
-
 ![Render](assets/dotKeeb.png)
 >  ## Table of contents
 >  - [Overview](#overview)
