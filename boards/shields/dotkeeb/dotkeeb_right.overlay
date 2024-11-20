@@ -148,7 +148,7 @@
     compatible = "zmk,input-behavior-scaler";
     #binding-cells = <2>;
     evt-type = <INPUT_EV_REL>;
-    x-input-code = <INPUT_REL_X>;
+    input-code = <INPUT_REL_X>;
   };
   ib_scaler_y: ib_scaler_y {
     compatible = "zmk,input-behavior-scaler";
