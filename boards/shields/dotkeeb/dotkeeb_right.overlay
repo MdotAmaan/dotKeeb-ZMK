@@ -115,7 +115,7 @@
     bindings = <&ib_wheel_scaler 1 42>, <&ib_misc_scaler 0 0>;
   };
   
-  tb0_msl_ibl {
+  tb0_mss_ibl {
     compatible = "zmk,input-behavior-listener";
     device = <&trackball>;
     layers = <MSS>;
