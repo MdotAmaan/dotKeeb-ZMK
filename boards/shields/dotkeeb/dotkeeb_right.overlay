@@ -68,7 +68,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <600>;
+        cpi = <700>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -76,32 +76,30 @@
 };
 
 / {
-  tb0_mmv_ibl {
+  tb_mouse_move {
     compatible = "zmk,input-behavior-listener";
     device = <&trackball>;
 
-    /* only enable in default layer (DEF) & mouse key layer (MSK) */
-    layers = <DEF NUM GME MSK>;
+    // Enable on all layers apart from scroll and snipe
+    layers = <DEF NUM NAV GME MSK>;
 
-    /* designed for switching to mouse scroll, xy-swap, precise-mode+, etc */
     evt-type = <INPUT_EV_REL>;
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     scale-multiplier = <1>;
     scale-divisor = <1>;
 
-    /* bind a behavior to auto activate MSK layer for &mkp */
-    bindings = <&ib_tog_layer MSK>;
+    // Behavior to toggle the mouse key layer on trackball movement
+    bindings = <&tog_layer MSK>;
 
-    /* align to CCW 45 degree */
     rotate-deg = <315>;
     /* NOTE 1: This settings do not compitable with y-invert and x-invert */
     /* NOTE 2: Floating point computation requires alot of ram. */
     /*         This feature will cuase stackove flow with CONFIG_ZMK_USB_LOGGING=y */
   };
 
-  /* input config for mouse scroll mode on momentary mouse scoll layer (MSC) */
-  tb0_msl_ibl {
+  /* Switch to Scroll mode on MSC layer */
+  tb_scroll {
     compatible = "zmk,input-behavior-listener";
     device = <&trackball>;
     layers = <MSC>;
@@ -111,11 +109,11 @@
     y-input-code = <INPUT_REL_WHEEL>;
 
     y-invert;
-
-    bindings = <&ib_wheel_scaler 1 42>;
+    bindings = <&wheel_scaler 1 42>;
   };
-  
-  tb0_mss_ibl {
+
+ /* Swtich to "Snipe" mode (lowers sensitivity) on MSS layer */ 
+  tb_snipe {
     compatible = "zmk,input-behavior-listener";
     device = <&trackball>;
     layers = <MSS>;
@@ -126,31 +124,33 @@
     
     rotate-deg = <315>;
 
-    bindings = <&ib_scaler_x 1 2>, <&ib_scaler_y 1 2>;
+    /* Reduce Sensitivity by 1/3 */
+    bindings = <&scaler_x 1 3>, <&scaler_y 1 3>;
   };
 
-  /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
-  ib_tog_layer: ib_tog_layer {
+  /* Timeout for automatic mouse key layer */
+  tog_layer: tog_layer {
     compatible = "zmk,input-behavior-tog-layer";
     #binding-cells = <1>;
     time-to-live-ms = <2000>;
   };
 
-  /* define a resolution down scaler only for INPUT_REL_WHEEL */
-  ib_wheel_scaler: ib_wheel_scaler {
+  /* Scaler for scroll wheel */
+  wheel_scaler: wheel_scaler {
     compatible = "zmk,input-behavior-scaler";
     #binding-cells = <2>;
     evt-type = <INPUT_EV_REL>;
     input-code = <INPUT_REL_WHEEL>;
   };
 
-  ib_scaler_x: ib_scaler_x {
+  // Scaler for x and y-axis movement. Used for snipe mode
+  scaler_x: scaler_x {
     compatible = "zmk,input-behavior-scaler";
     #binding-cells = <2>;
     evt-type = <INPUT_EV_REL>;
     input-code = <INPUT_REL_X>;
   };
-  ib_scaler_y: ib_scaler_y {
+  scaler_y: scaler_y {
     compatible = "zmk,input-behavior-scaler";
     #binding-cells = <2>;
     evt-type = <INPUT_EV_REL>;
