@@ -1,12 +1,7 @@
 # dotKeeb
 
-<<<<<<< Updated upstream
-=======
 A wireless ergonomic keyboard inspired by the dactyl using low profile switches and a trackball.
 
-[Docs are WIP]
-
->>>>>>> Stashed changes
 ![Render](assets/dotKeeb.png)
 >  ## Table of contents
 >  - [Overview](#overview)
