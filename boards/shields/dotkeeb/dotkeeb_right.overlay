@@ -77,7 +77,7 @@
     device = <&trackball>;
 
     /* only enable in default layer (DEF) & mouse key layer (MSK) */
-    // layers = <DEF MSK>;
+    layers = <0 1 2 3 4>;
 
     /* designed for switching to mouse scroll, xy-swap, precise-mode+, etc */
     evt-type = <INPUT_EV_REL>;
