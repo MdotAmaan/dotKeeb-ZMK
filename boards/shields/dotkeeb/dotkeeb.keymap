@@ -23,8 +23,8 @@
         };
         combo_snipe {
             timeout-ms = <50>;
-            key-positions = <48 51>;
-            bindings = <&tog MSS>;
+            key-positions = <28 39>;
+            bindings = <&mo MSS>;
         };
     };
 
