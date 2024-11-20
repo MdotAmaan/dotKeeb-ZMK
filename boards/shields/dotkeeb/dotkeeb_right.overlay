@@ -11,7 +11,11 @@
 #define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
 #define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
 #define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
+
 #define DEF 0 // default layer
+#define GME 1 // game layer
+#define NUM 2 // secondary num layer
+#define NAV 3 // navigation layer
 #define MSK 4 // mouse key layer
 #define MSC 6 // mouse scroll layer
 #define MSS 7 // mouse snipe layer
@@ -77,7 +81,7 @@
     device = <&trackball>;
 
     /* only enable in default layer (DEF) & mouse key layer (MSK) */
-    layers = <0 1 2 3 4>;
+    layers = <DEF NUM GME MSK>;
 
     /* designed for switching to mouse scroll, xy-swap, precise-mode+, etc */
     evt-type = <INPUT_EV_REL>;
@@ -110,15 +114,15 @@
 
     bindings = <&ib_wheel_scaler 1 42>, <&ib_misc_scaler 0 0>;
   };
-
-  // Mouse snipe layer
-  tb0_mss_ibl {
+  
+  tb0_msl_ibl {
     compatible = "zmk,input-behavior-listener";
     device = <&trackball>;
     layers = <MSS>;
     evt-type = <INPUT_EV_REL>;
-    x-input-code = <INPUT_REL_MISC>;
-    y-input-code = <INPUT_REL_WHEEL>;
+    
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
 
     bindings = <&ib_misc_scaler 1 2>, <&ib_misc_scaler 1 2>;
   };
