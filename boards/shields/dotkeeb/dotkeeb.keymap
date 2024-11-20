@@ -6,8 +6,13 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define DEF 0 // default layer
+#define GME 1 // game layer
+#define NUM 2 // secondary num layer
+#define NAV 3 // navigation layer
 #define MSK 4 // mouse key layer
 #define MSC 6 // mouse scroll layer
+#define MSS 7 // mouse snipe layer
+
 / {  
     combos {
         compatible = "zmk,combos";
@@ -15,6 +20,11 @@
             timeout-ms = <50>;
             key-positions = <38 39 40>;
             bindings = <&tog 5>;
+        };
+        combo_snipe {
+            timeout-ms = <50>;
+            key-positions = <48 51>;
+            bindings = <&tog MSS>;
         };
     };
 
@@ -47,7 +57,7 @@
         compatible = "zmk,behavior-caps-word";
         label = "SMART_NAV";
         #binding-cells = <0>;
-        layers = <3>;                                
+        layers = <NAV>;                                
         continue-list = <LEFT DOWN UP RIGHT PG_UP PG_DN LCTRL LALT LSHFT>;  
       };
 

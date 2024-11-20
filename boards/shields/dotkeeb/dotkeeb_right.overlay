@@ -14,6 +14,7 @@
 #define DEF 0 // default layer
 #define MSK 4 // mouse key layer
 #define MSC 6 // mouse scroll layer
+#define MSS 7 // mouse snipe layer
 
 &default_transform { 
     col-offset = <6>;
@@ -76,7 +77,7 @@
     device = <&trackball>;
 
     /* only enable in default layer (DEF) & mouse key layer (MSK) */
-    layers = <DEF MSK>;
+    // layers = <DEF MSK>;
 
     /* designed for switching to mouse scroll, xy-swap, precise-mode+, etc */
     evt-type = <INPUT_EV_REL>;
@@ -108,6 +109,18 @@
     y-invert;
 
     bindings = <&ib_wheel_scaler 1 42>, <&ib_misc_scaler 0 0>;
+  };
+
+  // Mouse snipe layer
+  tb0_mss_ibl {
+    compatible = "zmk,input-behavior-listener";
+    device = <&trackball>;
+    layers = <MSS>;
+    evt-type = <INPUT_EV_REL>;
+    x-input-code = <INPUT_REL_MISC>;
+    y-input-code = <INPUT_REL_WHEEL>;
+
+    bindings = <&ib_misc_scaler 1 2>, <&ib_misc_scaler 1 2>;
   };
 
   /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
