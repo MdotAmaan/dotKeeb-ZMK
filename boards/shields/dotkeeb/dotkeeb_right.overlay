@@ -112,7 +112,7 @@
 
     y-invert;
 
-    bindings = <&ib_wheel_scaler 1 42>, <&ib_misc_scaler 0 0>;
+    bindings = <&ib_wheel_scaler 1 42>;
   };
   
   tb0_mss_ibl {
@@ -126,7 +126,7 @@
     
     rotate-deg = <315>;
 
-    bindings = <&ib_misc_scaler 1 2>, <&ib_misc_scaler 1 2>;
+    bindings = <&ib_scaler 1 2>, <&ib_scaler 1 2>;
   };
 
   /* adjust cooldown waiting period for mouse key layer (MSK) after activated */
@@ -144,7 +144,7 @@
     input-code = <INPUT_REL_WHEEL>;
   };
 
-  ib_misc_scaler: ib_misc_scaler {
+  ib_scaler: ib_scaler {
     compatible = "zmk,input-behavior-scaler";
     #binding-cells = <2>;
     evt-type = <INPUT_EV_REL>;
