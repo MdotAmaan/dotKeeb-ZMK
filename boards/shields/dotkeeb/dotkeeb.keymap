@@ -23,12 +23,12 @@
         };
         combo_snipe {
             timeout-ms = <50>;
-            key-positions = <28 39>;
+            key-positions = <29 40>;
             bindings = <&mo MSS>;
         };
     };
 
-    behaviors {
+    behaviors{
       hml: left_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
