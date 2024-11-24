@@ -52,7 +52,15 @@
         hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 46 47>;    // <---[[left-hand keys]]
         hold-trigger-on-release;
       };
-
+      ntg: nav_toggle {
+          compatible = "zmk,behavior-hold-tap";
+          #binding-cells = <2>;
+          flavor = "tap-preferred";
+          tapping-term-ms = <200>;
+          quick-tap-ms = <200>;
+          // require-prior-idle-ms = <125>;
+          bindings = <&mo>, <&smart_nav>;
+      };
       smart_nav: behavior_smart_nav {
         compatible = "zmk,behavior-caps-word";
         label = "SMART_NAV";
@@ -77,7 +85,7 @@
     &kp TAB      &kp A       &kp R       &kp S        &kp T        &kp G             &kp M        &kp N         &kp E            &kp I         &kp O           &kp SQT
     &kp GRAVE    &hml LGUI Z &hml LALT X &hml LSHFT C &hml LCTRL D &kp V             &kp K        &hmr LCTRL H  &hmr RSHFT COMMA &hmr LALT DOT &hmr LGUI FSLH  &kp BSLH
                  &kp MINUS   &kp EQUAL   &kp SPACE    &kp LCTRL    &lt 2 ESC         &smart_nav   &mt RSHFT RET &kp BSPC         &kp LBKT      &kp RBKT
-                                         &kp LALT     &kp LSHFT                      &mkp RCLK    &kp RALT      &kp DEL          &mo 6
+                                         &kp LALT     &kp LSHFT                      &mkp MCLK    &kp RALT      &kp DEL          &mo 6
             >;
 
             display-name = "BASE";
