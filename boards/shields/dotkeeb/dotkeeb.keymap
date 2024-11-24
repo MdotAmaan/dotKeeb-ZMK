@@ -59,14 +59,13 @@
           tapping-term-ms = <200>;
           quick-tap-ms = <200>;
           // require-prior-idle-ms = <125>;
-          bindings = <&mo>, <&smart_nav>;
+          bindings = <&mo>, <&nav_word>;
       };
-      smart_nav: behavior_smart_nav {
-        compatible = "zmk,behavior-caps-word";
-        label = "SMART_NAV";
-        #binding-cells = <0>;
-        layers = <NAV>;                                
-        continue-list = <LEFT DOWN UP RIGHT PG_UP PG_DN LCTRL LALT LSHFT>;  
+      nav_word : nav_word {
+        compatible = "zmk,behavior-auto-layer";
+        #binding-cells = <1>;
+        continue-list = <LEFT DOWN UP RIGHT PG_UP PG_DN>;  
+        ignore-modifiers;
       };
 
     };
@@ -84,7 +83,7 @@
     &out OUT_TOG &kp Q       &kp W       &kp F        &kp P        &kp B             &kp J        &kp L         &kp U            &kp Y         &kp SEMI        &tog 1
     &kp TAB      &kp A       &kp R       &kp S        &kp T        &kp G             &kp M        &kp N         &kp E            &kp I         &kp O           &kp SQT
     &kp GRAVE    &hml LGUI Z &hml LALT X &hml LSHFT C &hml LCTRL D &kp V             &kp K        &hmr LCTRL H  &hmr RSHFT COMMA &hmr LALT DOT &hmr LGUI FSLH  &kp BSLH
-                 &kp MINUS   &kp EQUAL   &kp SPACE    &kp LCTRL    &lt 2 ESC         &smart_nav   &mt RSHFT RET &kp BSPC         &kp LBKT      &kp RBKT
+                 &kp MINUS   &kp EQUAL   &kp SPACE    &kp LCTRL    &lt 2 ESC         &ntg NAV NAV &mt RSHFT RET &kp BSPC         &kp LBKT      &kp RBKT
                                          &kp LALT     &kp LSHFT                      &mkp MCLK    &kp RALT      &kp DEL          &mo 6
             >;
 
