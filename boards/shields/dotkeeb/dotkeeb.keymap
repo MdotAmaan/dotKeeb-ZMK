@@ -59,7 +59,7 @@
           tapping-term-ms = <200>;
           quick-tap-ms = <200>;
           // require-prior-idle-ms = <125>;
-          bindings = <&mo>, <&smart_nav>;
+          bindings = <&mo>, <&smart_nav>;
       };
       smart_nav: behavior_smart_nav {
         compatible = "zmk,behavior-caps-word";
