@@ -56,13 +56,13 @@
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
           flavor = "hold-preferred";
-          tapping-term-ms = <200>;
+          tapping-term-ms = <100>;
           bindings = <&mo>, <&tog>;
       };
       ntg: nav_toggle {
           compatible = "zmk,behavior-hold-tap";
           #binding-cells = <2>;
-          flavor = "tap-preferred";
+          flavor = "hold-preferred";
           tapping-term-ms = <200>;
           quick-tap-ms = <200>;
           // require-prior-idle-ms = <125>;
