@@ -132,7 +132,7 @@
   tog_layer: tog_layer {
     compatible = "zmk,input-behavior-tog-layer";
     #binding-cells = <1>;
-    time-to-live-ms = <2000>;
+    time-to-live-ms = <3000>;
   };
 
   /* Scaler for scroll wheel */
