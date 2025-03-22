@@ -20,7 +20,7 @@
         combo_sys {
             timeout-ms = <50>;
             key-positions = <38 39 40>;
-            bindings = <&tog 5>;
+            bindings = <&tog SYS>;
         };
         combo_snipe {
             timeout-ms = <50>;
