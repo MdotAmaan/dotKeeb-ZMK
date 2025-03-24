@@ -22,24 +22,19 @@
             key-positions = <38 39 40>;
             bindings = <&tog SYS>;
         };
-        combo_snipe {
+        combo_game {
             timeout-ms = <50>;
-            key-positions = <17 29>;
-            bindings = <&mo MSS>;
-        };
-        combo_backspace {
-            timeout-ms = <50>;
-            key-positions = <18 30>;
-            bindings = <&kp BSPC>;
+            key-positions = <36 37>;
+            bindings = <&tog GME>;
         };
         combo_return {
             timeout-ms = <50>;
-            key-positions = <6 18>;
+            key-positions = <18 30>;
             bindings = <&kp RET>;
         };
     };
 
-    behaviors{
+    behaviors {
       hml: left_positional_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
@@ -99,10 +94,10 @@
 //          |    36    |    37    |    38    |    39    |    40    |              |    41    |    42    |    43    |    44    |    45    |
 //                                |    46    |    47    |                                    |    48    |    49    |
             bindings = <
-    &out OUT_TOG &kp Q       &kp W       &kp F        &kp P        &kp B             &kp J        &kp L         &kp U            &kp Y         &kp SEMI        &tog GME
+    &out OUT_TOG &kp Q       &kp W       &kp F        &kp P        &kp B             &kp J        &kp L         &kp U            &kp Y         &kp SEMI        &kp BSPC
     &kp TAB      &kp A       &kp R       &kp S        &kp T        &kp G             &kp M        &kp N         &kp E            &kp I         &kp O           &kp SQT
     &kp GRAVE    &hml LGUI Z &hml LALT X &hml LSHFT C &hml LCTRL D &kp V             &kp K        &hmr LCTRL H  &hmr RSHFT COMMA &hmr LALT DOT &hmr LGUI FSLH  &kp BSLH
-                 &kp MINUS   &kp EQUAL   &kp SPACE    &kp LCTRL    &lt NUM ESC         &none        &mt RSHFT RET &ntg NAV NAV     &kp LBKT      &kp RBKT
+                 &kp MINUS   &kp EQUAL   &kp SPACE    &kp LCTRL    &lt NUM ESC       &none        &mt RSHFT RET &ntg NAV NAV     &kp LBKT      &kp RBKT
                                          &kp LALT     &kp LSHFT                      &none        &none         &kp DEL            &none
             >;
             display-name = "BASE";
@@ -110,7 +105,7 @@
 
         game_layer {
             bindings = <
-     &kp L      &kp ESC   &kp Q     &kp W     &kp E     &kp R                      &mkp RCLK  &kp U     &kp I     &kp O    &kp P     &tog GME
+     &kp L      &kp ESC   &kp Q     &kp W     &kp E     &kp R                      &mkp RCLK  &kp U     &kp I     &kp O    &kp P     &kp BSPC
      &kp TAB    &kp LSHFT &kp A     &kp S     &kp D     &kp F                      &mkp LCLK  &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
      &kp B      &kp LCTRL &kp Z     &kp X     &kp C     &kp V                      &mkp RCLK  &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp BSLH
                 &kp Y     &kp O     &kp T     &kp SPACE &mo 2                      &trans    &trans    &trans    &kp LBKT &kp RBKT
@@ -121,22 +116,22 @@
 
         nav_layer {
             bindings = <
-     &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &trans    &trans    &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
-     &trans     &trans    &trans    &trans   &trans   &trans                       &trans        &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans
-                &trans    &trans    &trans   &trans   &trans                       &trans        &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
-                                    &trans   &trans                                &trans        &trans    &trans    &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &trans    &trans    &trans    &trans    &trans    &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans
+     &trans     &trans    &trans    &trans   &trans   &trans                       &trans    &kp HOME  &kp PG_DN &kp PG_UP &kp END   &trans
+                &trans    &trans    &trans   &trans   &trans                       &trans    &trans    &trans    &kp C_AC_BACK  &kp C_AC_FORWARD
+                                    &trans   &trans                                &trans    &trans    &trans    &trans
             >;
             display-name = "NAV";
         };
 
         l1_layer {
             bindings = <
-    &caps_word      &kp F1           &kp F2         &kp F3            &kp F4              &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
-    &kp PSCRN       &kp N1           &kp N2         &kp N3            &kp N4              &kp N5             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp F12
-    &kp LC(LA(DEL)) &hml LGUI LA(F4) &hml LALT C_PP &hml LSHFT C_MUTE &hml LCTRL C_VOL_DN &kp C_VOL_UP       &trans    &trans    &trans    &trans    &trans    &trans
-                    &kp C_AC_BACK  &kp C_AC_FORWARD &trans            &trans              &trans             &trans    &trans    &trans    &trans    &trans
-                                                    &trans            &trans                                           &trans    &trans    &trans    &trans
+    &caps_word      &kp F1           &kp F2         &kp F3            &kp F4              &kp F5          &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp F11
+    &kp PSCRN       &kp N1           &kp N2         &kp N3            &kp N4              &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp F12
+    &kp LC(LA(DEL)) &hml LGUI LA(F4) &hml LALT C_PP &hml LSHFT C_MUTE &hml LCTRL C_VOL_DN &kp C_VOL_UP    &trans    &trans    &trans    &trans    &trans    &trans
+                    &kp C_AC_BACK  &kp C_AC_FORWARD &trans            &trans              &trans          &trans    &trans    &trans    &trans    &trans
+                                                    &trans            &trans                                        &trans    &trans    &trans    &trans
             >;
             display-name = "NUM";
         };
