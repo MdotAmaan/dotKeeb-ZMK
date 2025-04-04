@@ -108,7 +108,7 @@
      &kp L      &kp ESC   &kp Q     &kp W     &kp E     &kp R                      &mkp RCLK  &kp U     &kp I     &kp O    &kp P     &kp BSPC
      &kp TAB    &kp LSHFT &kp A     &kp S     &kp D     &kp F                      &mkp LCLK  &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
      &kp B      &kp LCTRL &kp Z     &kp X     &kp C     &kp V                      &mkp RCLK  &kp M     &kp COMMA &kp DOT  &kp FSLH  &kp BSLH
-                &kp Y     &kp O     &kp T     &kp SPACE &mo 2                      &trans    &trans    &trans    &kp LBKT &kp RBKT
+                &kp Y     &kp O     &kp T     &kp SPACE &mo NUM                    &trans    &trans    &trans    &kp LBKT &kp RBKT
                                     &kp G     &kp M                                &trans    &trans    &trans    &trans
             >;
             display-name = "GAME";
