@@ -10,7 +10,7 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: urob 
+      remote: zmkfirmware 
       revision: main 
       import: app/west.yml
     - name: zmk-pmw3610-driver
